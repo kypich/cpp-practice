@@ -8,7 +8,6 @@ void check_win_warg(bool res) {
         std::cout << "Not" << std::endl;
     }
 }
-// function here:
 
 double compute(double a, double b) {
     return a + b;
