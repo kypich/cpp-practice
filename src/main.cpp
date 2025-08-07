@@ -1,37 +1,27 @@
 #include <iostream>
-
-void check_win_warg(bool res) {
-    if (res) {
-        std::cout << "Ready" << std::endl;
-    }
-    else {
-        std::cout << "Not" << std::endl;
-    }
-}
-
-double compute(double a, double b) {
-    return a + b;
-}
-
-//example 1 (0.4)
-
-void example_1(void) {
-    std::cout << "Here is some text.";
-}
+#include "tasks/tasks.hpp"
 
 
 
 int main(void) {
     // Task 1
-    // bool res = true;
-    // check_win_warg(res);
+    std::cout << "task 1 solution: " << std::endl;
+    bool res = true;
+    check_win_warg(res);
 
     // Task 2: Compute the sum of a and b, a and b should be provided as arguments, the result should be divided by 2 and printed to the screen 
-    //double a = 5;
-    //double b = 10;
-    //std::cout << compute(a, b) / 2 << std::endl;
-    //return 0;
+    std::cout << "task 2 solution: " << std::endl;
+    double a = 5;
+    double b = 10;
+    std::cout << compute(a, b) / 2 << std::endl;
 
+    // Task3
+    std::cout << "task 3 solution: " << std::endl;
     example_1();
+
+    //Task4
+    std::cout << "task 4 solution: " << std::endl;
+    std::cout << hui(5,6) << std::endl;
+
     return 0;
 }
