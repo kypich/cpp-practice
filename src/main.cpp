@@ -13,14 +13,25 @@ double compute(double a, double b) {
     return a + b;
 }
 
+//example 1 (0.4)
+
+void example_1(void) {
+    std::cout << "Here is some text.";
+}
+
+
+
 int main(void) {
     // Task 1
     // bool res = true;
     // check_win_warg(res);
 
     // Task 2: Compute the sum of a and b, a and b should be provided as arguments, the result should be divided by 2 and printed to the screen 
-    double a = 5;
-    double b = 10;
-    std::cout << compute(a, b) / 2 << std::endl;
+    //double a = 5;
+    //double b = 10;
+    //std::cout << compute(a, b) / 2 << std::endl;
+    //return 0;
+
+    example_1();
     return 0;
 }
