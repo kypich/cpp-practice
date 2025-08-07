@@ -1,6 +1,7 @@
 #include "tasks.hpp"
 #include <iostream>
 #include <cmath>
+#include <string>
 
 void check_win_warg(bool res) {
     if (res) {
@@ -21,6 +22,13 @@ void example_1(void) {
     std::cout << "Here is some text." << std::endl;
 }
 
-int hui(int a, int b) {
+int task_4(int a, int b) {
     return std::pow(a, b);
+}
+
+std::string get_user_name(void) {
+    std::string user_name;
+    std::cout << "What is your name?" << std::endl;
+    std::cin >> user_name;
+    return user_name;
 }
