@@ -21,11 +21,18 @@ int main(void) {
 
     //Task4
     std::cout << "task 4 solution: " << std::endl;
-    std::cout << task_4(5,6) << std::endl;
+    std::cout << task_4(15,6) << std::endl;
 
     //Task 5
     std::cout << "task 5 solution: " << std::endl;
     std::string user_name = get_user_name();
     std::cout << "Hello " << user_name << std::endl;
+    
+    //Task 6 Size of Fundamental Data Types
+    std::cout << "task 6 solution: " << std::endl;
+    check_size();
+
+
+    
     return 0;
 }

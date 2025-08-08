@@ -22,7 +22,7 @@ void example_1(void) {
     std::cout << "Here is some text." << std::endl;
 }
 
-int task_4(int a, int b) {
+long long task_4(int a, int b) {
     return std::pow(a, b);
 }
 
@@ -31,4 +31,16 @@ std::string get_user_name(void) {
     std::cout << "What is your name?" << std::endl;
     std::cin >> user_name;
     return user_name;
+}
+
+void check_size(void){
+    std::cout << "The sizeof(char) is: " << sizeof(char) << " bytes" << std::endl;
+    std::cout << "The sizeof(short) is: " << sizeof(short) << " bytes" << std::endl;
+    std::cout << "The sizeof(int) is: " << sizeof(int) << " bytes" << std::endl;
+    std::cout << "The sizeof(long) is: " << sizeof(long) << " bytes" << std::endl;
+    std::cout << "The sizeof(long long) is: " << sizeof(long long) << " bytes" << std::endl;
+    std::cout << "The sizeof(float) is: " << sizeof(float) << " bytes" << std::endl;
+    std::cout << "The sizeof(double) is: " << sizeof(double) << " bytes" << std::endl;
+    std::cout << "The sizeof(long double) is: " << sizeof(long double) << " bytes" << std::endl;
+    std::cout << "The sizeof(bool) is: " << sizeof(bool) << " bytes" << std::endl;
 }
