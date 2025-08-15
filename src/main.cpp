@@ -10,7 +10,7 @@
     bool res = true;
     check_win_warg(res);
 
-    // Task 2: Compute the sum of a and b, a and b should be provided as arguments, the result should be divided by 2 and printed to the screen 
+    // Task 2: Compute the sum of a and b, a and b should be provided as arguments, the result should be divided by 2 and printed to the screen
     std::cout << "task 2 solution: " << std::endl;
     double a = 5;
     double b = 10;
@@ -39,71 +39,107 @@
 
 
 // Переменные и типы данных
-void partInfo1() {
+void partInfo2(int swnum) {
+    switch (swnum) {
+    case 1: {
+        //Использование переменных
+        int a, b;
+        std::cout << "Введите переменную a: ";
+        std::cin >> a;
 
-    //Использование переменных
-    int a, b;
-    std::cout << "Введите переменную a: ";
-    std::cin >> a;
+        std::cout << "Введите переменную b: ";
+        std::cin >> b;
 
-    std::cout << "Введите переменную b: ";
-    std::cin >> b;
+        std::cout << "A: " << a << ". B: " << b;
 
-    std::cout << "A: " << a << ". B: " << b;
-    
-    // Типы данных(целые числа)
-    short num1 = 7; // 2 byte / от -32K до 32K
-    int num2 = 5; // 4 byte / от -2B до 2B
-    long num3 = 50; // 8 byte
+        // Типы данных(целые числа)
+        short num1 = 7; // 2 byte / от -32K до 32K
+        int num2 = 5; // 4 byte / от -2B до 2B
+        long num3 = 50; // 8 byte
 
-    unsigned short num4 = 7; // 2 byte / от 0 до 65K
-    unsigned int num5 = 5; // 4 byte / от 0 до 4B
-    unsigned long num6 = 50; // 8 byte
+        unsigned short num4 = 7; // 2 byte / от 0 до 65K
+        unsigned int num5 = 5; // 4 byte / от 0 до 4B
+        unsigned long num6 = 50; // 8 byte
 
-    // Числа с точкой
-    float num7 = 5.893456f;
-    double num8 = 454.343411f;
+        // Числа с точкой
+        float num7 = 5.893456f;
+        double num8 = 454.343411f;
 
-    // Хранение символа
-    char sym = '&';
+        // Хранение символа
+        char sym = '&';
 
-    bool isHappy = true;
-
+        bool isHappy = true;
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
 }
 
-// Условные конструкции
-void partInfo2() {
-    int num;
-    std::cout << "Введите число: ";
-    std::cin >> num;
+// Условные конструкции (if else) // switch case
+void partInfo3(int swnum) {
+    switch (swnum) {
+    case 1: {
+        int num;
+        std::cout << "Введите число: ";
+        std::cin >> num;
 
-    bool is_has_car = true;
+        bool is_has_car = true;
 
-    // Логические операторы
-    //  || - или (or)
-    //  && - и (and)
+        // Логические операторы
+        //  || - или (or)
+        //  && - и (and)
 
-    if (num >= 3 || !is_has_car) {
-        std::cout << "Число у нас больше";
-        if (num == 5) {
-            std::cout << "Число == 5";
+        if (num >= 3 || !is_has_car) {
+            std::cout << "Число у нас больше";
+            if (num == 5) {
+                std::cout << "Число == 5";
+            }
         }
+        else if (num == 2) {
+            std::cout << "Число == 2";
+        }
+        else if (num == -12) {
+            std::cout << "Число == -12";
+        }
+        else {
+            std::cout << "Сработал else";
+        }
+        break;
     }
-    else if (num == 2) {
-        std::cout << "Число == 2";
+    case 2: {
+        int num;
+        std::cin >> num;
+
+        switch (num) {
+        case 5:
+            std::cout << "Num is 5";
+            break;
+        case 50:
+            std::cout << "Num is 50";
+            break;
+        case 35:
+            std::cout << "Num is 35";
+            break;
+        default:
+            std::cout << "Default";
+            break;
+        }
+        break;
     }
-    else if (num == -12) {
-        std::cout << "Число == -12";
-    }
-    else {
-        std::cout << "Сработал else";
+    default:
+        std::cout << "Default";
+        break;
     }
 }
 
 
-int main(){
+int main() {
     SetConsoleOutputCP(65001); // UTF-8
     SetConsoleCP(65001);
+
+    partInfo3(2);
 
     return 0;
 }
