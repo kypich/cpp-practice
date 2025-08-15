@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <time.h>
 #include "tasks/tasks.hpp"
 
 
@@ -190,9 +191,13 @@ void partInfo4(int swnum) {
         a++; // Добавляем 1
         a--; // Отнимаем 1
 
-
-
         break;
+    }
+    case 3: {
+        srand(time(NULL));
+
+        int result = 1 + rand() % 20; // случайное число от 1 до 20
+        std::cout << result << std::endl;
     }
     default:
         std::cout << "Default";
@@ -205,7 +210,7 @@ int main() {
     SetConsoleOutputCP(65001); // UTF-8
     SetConsoleCP(65001);
 
-    partInfo4(1);
+    partInfo4(3);
 
     return 0;
 }
