@@ -40,9 +40,34 @@
 int main(){
     SetConsoleOutputCP(65001); // UTF-8
     SetConsoleCP(65001);
-    int num = -45;
-    num = 3;
-    std::cout << "Переменная: " << num << std::endl;
+
+    //Использование переменных
+    int a, b;
+    std::cout << "Введите переменную a: ";
+    std::cin >> a;
+
+    std::cout << "Введите переменную b: ";
+    std::cin >> b;
+
+    std::cout << "A: " << a << ". B: " << b;
+    
+    // Типы данных(целые числа)
+    short num1 = 7; // 2 byte / от -32K до 32K
+    int num2 = 5; // 4 byte / от -2B до 2B
+    long num3 = 50; // 8 byte
+
+    unsigned short num4 = 7; // 2 byte / от 0 до 65K
+    unsigned int num5 = 5; // 4 byte / от 0 до 4B
+    unsigned long num6 = 50; // 8 byte
+
+    // Числа с точкой
+    float num7 = 5.893456f;
+    double num8 = 454.343411f;
+
+    // Хранение символа
+    char sym = '&';
+
+    bool isHappy = true;
 
     return 0;
 }
