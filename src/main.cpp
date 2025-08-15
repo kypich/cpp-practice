@@ -37,9 +37,9 @@
     return 0;
 }*/
 
-int main(){
-    SetConsoleOutputCP(65001); // UTF-8
-    SetConsoleCP(65001);
+
+// Переменные и типы данных
+void partInfo1() {
 
     //Использование переменных
     int a, b;
@@ -68,6 +68,42 @@ int main(){
     char sym = '&';
 
     bool isHappy = true;
+
+}
+
+// Условные конструкции
+void partInfo2() {
+    int num;
+    std::cout << "Введите число: ";
+    std::cin >> num;
+
+    bool is_has_car = true;
+
+    // Логические операторы
+    //  || - или (or)
+    //  && - и (and)
+
+    if (num >= 3 || !is_has_car) {
+        std::cout << "Число у нас больше";
+        if (num == 5) {
+            std::cout << "Число == 5";
+        }
+    }
+    else if (num == 2) {
+        std::cout << "Число == 2";
+    }
+    else if (num == -12) {
+        std::cout << "Число == -12";
+    }
+    else {
+        std::cout << "Сработал else";
+    }
+}
+
+
+int main(){
+    SetConsoleOutputCP(65001); // UTF-8
+    SetConsoleCP(65001);
 
     return 0;
 }
