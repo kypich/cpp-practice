@@ -134,12 +134,78 @@ void partInfo3(int swnum) {
     }
 }
 
+void partInfo4(int swnum) {
+    switch (swnum) {
+    case 1: {
+        float num1, num2, res;
+        std::cout << "Enter num1: ";
+        std::cin >> num1;
+
+        std::cout << "Enter num2: ";
+        std::cin >> num2;
+
+        // +, -, *, /
+        char math;
+        std::cout << "Enter math symbol: ";
+        std::cin >> math;
+
+        // if (math == '+')
+        //     res = num1 + num2;
+        // else if (math == '-')
+        //     res = num1 - num2;
+        // else if (math == '*')
+        //     res = num1 * num2;
+        // else if (math == '/')
+        //     res = num1 / num2;
+
+        switch(math) {
+        case '+':
+            res = num1 + num2;
+            break;
+        case '-':
+            res = num1 - num2;
+            break;
+        case '*':
+            res = num1 * num2;
+            break;
+        case '/':
+            res = num1 / num2;
+            break;
+        default:
+            res = 0;
+            std::cout << "Error";
+            break;
+        }
+        std::cout << "Result: " << res << std::endl;
+        break;
+    }
+    case 2: {
+        // Остаток при делении
+        int a = 10, b = 3, z;
+        z = a % b;
+        std::cout << z;
+
+        // Сокращенные операции
+        a += 5;
+        a++; // Добавляем 1
+        a--; // Отнимаем 1
+
+
+
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
 
 int main() {
     SetConsoleOutputCP(65001); // UTF-8
     SetConsoleCP(65001);
 
-    partInfo3(2);
+    partInfo4(1);
 
     return 0;
 }
