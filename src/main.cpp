@@ -323,6 +323,24 @@ void partInfo6(int swnum) {
 
         break;
     }
+    case 3: {
+        // Многомерные массивы
+        int matrix[3][2] = {
+            {3, 5},
+            {5, 8},
+            {-2, 0}
+        };
+        // matrix[1][1] = 6;
+        // std::cout << matrix[1][1] << std::endl;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 2; j++) {
+                std::cout << matrix[i][j] << std::endl;
+            }
+        }
+
+
+        break;
+    }
     default:
         std::cout << "Default";
         break;
@@ -333,7 +351,7 @@ void partInfo6(int swnum) {
 
 int main() {
 
-    partInfo6(2);
+    partInfo6(3);
 
     return 0;
 }
