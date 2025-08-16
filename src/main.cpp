@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include <time.h>
 #include "tasks/tasks.hpp"
 
@@ -45,10 +44,10 @@ void partInfo2(int swnum) {
     case 1: {
         //Использование переменных
         int a, b;
-        std::cout << "Введите переменную a: ";
+        std::cout << "Enter variable a: ";
         std::cin >> a;
 
-        std::cout << "Введите переменную b: ";
+        std::cout << "Enter variable b: ";
         std::cin >> b;
 
         std::cout << "A: " << a << ". B: " << b;
@@ -83,7 +82,7 @@ void partInfo3(int swnum) {
     switch (swnum) {
     case 1: {
         int num;
-        std::cout << "Введите число: ";
+        std::cout << "Enter a number: ";
         std::cin >> num;
 
         bool is_has_car = true;
@@ -93,19 +92,19 @@ void partInfo3(int swnum) {
         //  && - и (and)
 
         if (num >= 3 || !is_has_car) {
-            std::cout << "Число у нас больше";
+            std::cout << "The number is greater";
             if (num == 5) {
-                std::cout << "Число == 5";
+                std::cout << "Number == 5";
             }
         }
         else if (num == 2) {
-            std::cout << "Число == 2";
+            std::cout << "Number == 2";
         }
         else if (num == -12) {
-            std::cout << "Число == -12";
+            std::cout << "Number == -12";
         }
         else {
-            std::cout << "Сработал else";
+            std::cout << "ELSE";
         }
         break;
     }
@@ -159,7 +158,7 @@ void partInfo4(int swnum) {
         // else if (math == '/')
         //     res = num1 / num2;
 
-        switch(math) {
+        switch (math) {
         case '+':
             res = num1 + num2;
             break;
@@ -198,6 +197,41 @@ void partInfo4(int swnum) {
 
         int result = 1 + rand() % 20; // случайное число от 1 до 20
         std::cout << result << std::endl;
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
+// Циклы
+void partInfo5(int swnum) {
+    switch (swnum) {
+    // Цикл for
+    case 1: {
+        for (int i = 100; i >= 10; i -= 15) {
+            std::cout << "El: " << i << std::endl;
+        }
+        break;
+    }
+    // Цикл while
+    case 2: {
+        int j = 1;
+        while (j < 11) {
+            std::cout << "El: " << j << std::endl;
+            j++;
+        }
+        break;
+    }
+    // Цикл do while
+    case 3:{
+        int k = 100;
+        do {
+            std::cout << "El: " << k << std::endl;
+            k -= 10;
+        } while (k < 10);
+        break;
     }
     default:
         std::cout << "Default";
@@ -206,11 +240,11 @@ void partInfo4(int swnum) {
 }
 
 
-int main() {
-    SetConsoleOutputCP(65001); // UTF-8
-    SetConsoleCP(65001);
 
-    partInfo4(3);
+
+int main() {
+
+    partInfo5(3);
 
     return 0;
 }
