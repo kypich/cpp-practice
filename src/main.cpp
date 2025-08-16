@@ -208,14 +208,14 @@ void partInfo4(int swnum) {
 // Циклы
 void partInfo5(int swnum) {
     switch (swnum) {
-    // Цикл for
+        // Цикл for
     case 1: {
         for (int i = 100; i >= 10; i -= 15) {
             std::cout << "El: " << i << std::endl;
         }
         break;
     }
-    // Цикл while
+          // Цикл while
     case 2: {
         int j = 1;
         while (j < 11) {
@@ -224,7 +224,7 @@ void partInfo5(int swnum) {
         }
         break;
     }
-    // Цикл do while
+          // Цикл do while
     case 3: {
         int k = 100;
         do {
@@ -238,7 +238,7 @@ void partInfo5(int swnum) {
         for (int i = 1; i < 15; i++) {
             if (i == 10)
                 break;
-            
+
             if (i % 2 == 0)
                 continue;
 
@@ -272,12 +272,40 @@ void partInfo5(int swnum) {
     }
 }
 
+// Массивы данных
+void partInfo6(int swnum) {
+    switch(swnum) {
+    case 1: {
+
+        int nums[3];
+        nums[0] = 56;
+        nums[1] = 563;
+        nums[2] = 2;
+
+        nums[1] = 4;
+        nums[1]++;
+
+        // std::cout << nums[1];
+
+        float nums2[3] = {4, 6, 7};
+
+        for (int i = 0; i < 3; i++) {
+            std::cout << "El " << i << ": " << nums2[i] << std::endl;
+        }
+
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
 
 
 
 int main() {
 
-    partInfo5(5);
+    partInfo6(1);
 
     return 0;
 }
