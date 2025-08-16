@@ -295,6 +295,34 @@ void partInfo6(int swnum) {
 
         break;
     }
+    case 2: {
+        // Практическое применение
+
+        // Присваивание значений по индексам
+        float numbers[5];
+        for (int i = 0; i < 5; i++) {
+            std::cout << "Enter number " << i << ": ";
+            std::cin >> numbers[i];
+        }
+
+        // Получение суммы или миннимального значения
+        float summa = 0;
+        float min = numbers[0];
+        for (int i = 0; i < 5; i++) {
+            summa += numbers[i];
+            if (numbers[i] < min)
+                min = numbers[i];
+        }
+        std::cout << "Summa: " << summa << std::endl;
+        std::cout << "Min: " << min << std::endl;
+
+        // Вывод значений по индексам в терминал
+        for (int i = 0; i < 5; i++) {
+            std::cout << "El: " << numbers[i] << std::endl;
+        }
+
+        break;
+    }
     default:
         std::cout << "Default";
         break;
@@ -305,7 +333,7 @@ void partInfo6(int swnum) {
 
 int main() {
 
-    partInfo6(1);
+    partInfo6(2);
 
     return 0;
 }
