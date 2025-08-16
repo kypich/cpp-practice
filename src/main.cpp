@@ -246,6 +246,26 @@ void partInfo5(int swnum) {
         }
         break;
     }
+    case 5: {
+        // Практический пример
+        srand(time(NULL));
+        int rand_num = 1 + rand() % 15;
+        bool stop = false;
+        int user_input;
+
+        do {
+            std::cout << "Enter number: ";
+            std::cin >> user_input;
+            if (user_input != rand_num)
+                std::cout << "You didn't guess" << std::endl;
+            else
+                stop = true;
+        } while (!stop);
+
+        std::cout << "That's right!";
+
+        break;
+    }
     default:
         std::cout << "Default";
         break;
@@ -257,7 +277,7 @@ void partInfo5(int swnum) {
 
 int main() {
 
-    partInfo5(4);
+    partInfo5(5);
 
     return 0;
 }
