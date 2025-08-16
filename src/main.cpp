@@ -225,12 +225,25 @@ void partInfo5(int swnum) {
         break;
     }
     // Цикл do while
-    case 3:{
+    case 3: {
         int k = 100;
         do {
             std::cout << "El: " << k << std::endl;
             k -= 10;
         } while (k < 10);
+        break;
+    }
+    case 4: {
+        // Операторы в циклах
+        for (int i = 1; i < 15; i++) {
+            if (i == 10)
+                break;
+            
+            if (i % 2 == 0)
+                continue;
+
+            std::cout << "El: " << i << std::endl;
+        }
         break;
     }
     default:
@@ -244,7 +257,7 @@ void partInfo5(int swnum) {
 
 int main() {
 
-    partInfo5(3);
+    partInfo5(4);
 
     return 0;
 }
