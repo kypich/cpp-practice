@@ -337,7 +337,23 @@ void partInfo6(int swnum) {
                 std::cout << matrix[i][j] << std::endl;
             }
         }
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
 
+// Динамический массив
+void partInfo7(int swnum) {
+    switch(swnum){
+    case 1:{
+        
+        int *nums = new int[3]; // Выдиление памяти
+        nums[0] = 45;
+        std::cout << nums[0] << std::endl; 
+        delete[] nums; // Память очищена
 
         break;
     }
@@ -348,10 +364,9 @@ void partInfo6(int swnum) {
 }
 
 
-
 int main() {
 
-    partInfo6(3);
+    partInfo7(1);
 
     return 0;
 }
