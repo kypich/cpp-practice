@@ -398,6 +398,10 @@ void print(std::string word) {
     std::cout << word << std::endl;
 }
 
+int add(int a, int b) {
+    return a + b;
+}
+
 void partInfo9(int swnum) {
     switch(swnum) {
     case 1: {
@@ -405,6 +409,17 @@ void partInfo9(int swnum) {
         std::string words = "World";
         print(words);
         print("!!!");        
+        break;
+    }
+    case 2: {
+        int res1 = add(1, 3);
+        int res2 = add(5, 7);
+        if (res1 > res2) {
+            std::cout << res1 << std::endl;
+        }
+        else {
+            std::cout << res2 << std::endl;
+        }
         break;
     }
     default:
@@ -416,7 +431,7 @@ void partInfo9(int swnum) {
 
 int main() {
 
-    partInfo9(1);
+    partInfo9(2);
 
     return 0;
 }
