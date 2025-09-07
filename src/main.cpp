@@ -393,9 +393,30 @@ void partInfo8(int swnum) {
 }
 
 
+//Функции
+void print(std::string word) {
+    std::cout << word << std::endl;
+}
+
+void partInfo9(int swnum) {
+    switch(swnum) {
+    case 1: {
+        print("Hello");
+        std::string words = "World";
+        print(words);
+        print("!!!");        
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
+
 int main() {
 
-    partInfo8(1);
+    partInfo9(1);
 
     return 0;
 }
