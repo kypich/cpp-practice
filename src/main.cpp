@@ -462,7 +462,21 @@ void partInfo10(int swnum) {
     }
 }
 
+
 // Указатели и ссылки
+void minimal(int* arr, int len) {
+    int min = *arr;
+    for (int i = 0; i < len; i++) {
+        if (min > *(arr + i)) {
+            min = *(arr + i);
+        }
+    }
+    std::cout << "Minimal: " << min << std::endl;
+}
+
+
+
+
 void partInfo11(int swnum) {
     switch (swnum) {
     case 1: {
@@ -482,8 +496,18 @@ void partInfo11(int swnum) {
         *ptrval = 20;
         ptrval = nullptr;
 
+        // Адрес - Значение
         std::cout << &val << " - " << val << std::endl;
         std::cout << ptrval << " - " << *ptrval << std::endl;
+
+        break;
+    }
+    case 2: {
+        // Практический пример
+
+        int arr[] = {5, 7, 3, -2, 5};
+        minimal(arr, 5);
+
 
         break;
     }
@@ -496,7 +520,7 @@ void partInfo11(int swnum) {
 
 int main() {
 
-    partInfo11(1);
+    partInfo11(2);
 
     return 0;
 }
