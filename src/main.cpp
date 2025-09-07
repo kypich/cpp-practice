@@ -462,10 +462,41 @@ void partInfo10(int swnum) {
     }
 }
 
+// Указатели и ссылки
+void partInfo11(int swnum) {
+    switch (swnum) {
+    case 1: {
+        // Ссылки
+        int num = 10; // 4 byte
+        int &a = num; // хранит только адрес где хранится num (ссылка)
+
+        a = 15;
+
+        std::cout << &num << " - " << num << std::endl;
+        std::cout << &a << " - " << a << std::endl;
+
+        // Указатели
+        int val = 12;
+        int* ptrval = &val;
+
+        *ptrval = 20;
+        ptrval = nullptr;
+
+        std::cout << &val << " - " << val << std::endl;
+        std::cout << ptrval << " - " << *ptrval << std::endl;
+
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
 
 int main() {
 
-    partInfo10(1);
+    partInfo11(1);
 
     return 0;
 }
