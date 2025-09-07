@@ -1,5 +1,6 @@
 #include <iostream>
 #include <time.h>
+#include <string>
 #include "tasks/tasks.hpp"
 
 
@@ -274,7 +275,7 @@ void partInfo5(int swnum) {
 
 // Массивы данных
 void partInfo6(int swnum) {
-    switch(swnum) {
+    switch (swnum) {
     case 1: {
 
         int nums[3];
@@ -287,7 +288,7 @@ void partInfo6(int swnum) {
 
         // std::cout << nums[1];
 
-        float nums2[3] = {4, 6, 7};
+        float nums2[3] = { 4, 6, 7 };
 
         for (int i = 0; i < 3; i++) {
             std::cout << "El " << i << ": " << nums2[i] << std::endl;
@@ -347,13 +348,41 @@ void partInfo6(int swnum) {
 
 // Динамический массив
 void partInfo7(int swnum) {
-    switch(swnum){
-    case 1:{
-        
-        int *nums = new int[3]; // Выдиление памяти
+    switch(swnum) {
+    case 1: {
+
+        int* nums = new int[3]; // Выдиление памяти
+        // int *nums = (int*)malloc(3*sizeof(int));
         nums[0] = 45;
-        std::cout << nums[0] << std::endl; 
-        delete[] nums; // Память очищена
+        std::cout << nums[0] << std::endl;
+        delete[] nums; // Память очищена'
+        // free(nums);
+        std::cout << "El: " << nums[0] << std::endl;
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
+//Работа со строками и символами
+void partInfo8(int swnum) {
+    switch(swnum) {
+    case 1: {
+        char word[] = "Hi!";  // {'H', 'i', '!'};
+        for (int i = 0; i < 3; i++) {
+            std::cout << word[i];
+        }
+
+        //getline(std::cin, word);
+
+        std::string words = "Hello World";
+        words[0] = 'X'; // замена символа (символ на символ)
+        std::cout << "\n" << words << std::endl;
+
+        std::cin >> words;
+        std::cout << "New: " << words << std::endl;
 
         break;
     }
@@ -366,7 +395,7 @@ void partInfo7(int swnum) {
 
 int main() {
 
-    partInfo7(1);
+    partInfo8(1);
 
     return 0;
 }
