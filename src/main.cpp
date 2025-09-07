@@ -429,9 +429,43 @@ void partInfo9(int swnum) {
 }
 
 
+//Перегрузка функций
+// void print(std::string word) {
+//     std::cout << word << std::endl;
+// }
+
+void print(int word) {
+    std::cout << word << std::endl;
+}
+
+void summa(int a, int b){
+    int res = a + b;
+    print(res);
+}
+
+void summa(int a, int b, int c){
+    int res = a + b + c;
+    print(res);
+}
+
+void partInfo10(int swnum) {
+    switch(swnum) {
+    case 1: {
+        summa(15, 2);
+        print("some");
+        summa(3, 1, 4);
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
+
 int main() {
 
-    partInfo9(2);
+    partInfo10(1);
 
     return 0;
 }
