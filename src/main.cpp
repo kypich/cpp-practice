@@ -551,11 +551,17 @@ void partInfo12(int swnum) {
 
 // Структуры данных
 void partInfo13(int swnum) {
+
+    struct Point {
+        int x, y;
+    };
+
     struct Tree {
             std::string name;
             int ages;
             bool is_alive;
             float height;
+            Point place;
 
             void get_info() {
                 std::cout << "Name: " << name << ". Age: " << ages << std::endl;
@@ -567,10 +573,16 @@ void partInfo13(int swnum) {
         Tree dub;
         dub.name = "Dub";
         dub.ages = 24;
+        dub.place.x = 100;
+        dub.place.y = 10;
+
         
         Tree yelka;
         yelka.name = "Yelka";
         yelka.ages = 5;
+        yelka.place.x = 50;
+        yelka.place.y = 10;
+
 
         // std::cout << dub.name << " - " << yelka.name << std::endl;
         dub.get_info();
