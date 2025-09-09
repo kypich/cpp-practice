@@ -526,7 +526,19 @@ void partInfo12(int swnum) {
         std::ofstream file("test.txt", std::ios_base::out);  // Открытие файла
         if(file.is_open()) {             // Проверка открылся ли файл (is.open() - true / false)
             file << "Hello World";       // Запись текста в тектовый файл
-            file.close();                // Закрытие файла (для экономии оперативной памяти)
+            file.close();                // Закрываем (освобождает ресурсы)
+        }
+        break;
+    }
+    case 2: {
+        std::ifstream file("test.txt");
+        if (file.is_open()) {            // Проверка открылся ли файл (is.open() - true / false)                        
+            //std::string temp;            // Создание переменной
+            //file >> temp;                // Указываем что из файла мы считываем данные и записываем в переменную
+            char temp[100]; 
+            file.getline(temp, 100);
+            std::cout << temp << std::endl;
+            file.close();                // Закрываем (освобождает ресурсы)
         }
         break;
     }
@@ -542,7 +554,7 @@ void partInfo12(int swnum) {
 
 int main() {
 
-    partInfo12(1);
+    partInfo12(2);
     
 
     return 0;
