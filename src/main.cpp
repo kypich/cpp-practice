@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <string>
+#include <fstream>
 #include "tasks/tasks.hpp"
 
 
@@ -430,6 +431,7 @@ void partInfo9(int swnum) {
 
 
 //Перегрузка функций
+
 // void print(std::string word) {
 //     std::cout << word << std::endl;
 // }
@@ -507,8 +509,7 @@ void partInfo11(int swnum) {
 
         int arr[] = {5, 7, 3, -2, 5};
         minimal(arr, 5);
-
-
+        
         break;
     }
     default:
@@ -518,9 +519,31 @@ void partInfo11(int swnum) {
 }
 
 
+// Работа с файлами
+void partInfo12(int swnum) {
+    switch (swnum) {
+    case 1: {
+        std::ofstream file("test.txt", std::ios_base::out);  // Открытие файла
+        if(file.is_open()) {             // Проверка открылся ли файл (is.open() - true / false)
+            file << "Hello World";       // Запись текста в тектовый файл
+            file.close();                // Закрытие файла (для экономии оперативной памяти)
+        }
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
+
+
+
+
 int main() {
 
-    partInfo11(2);
+    partInfo12(1);
+    
 
     return 0;
 }
