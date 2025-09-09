@@ -549,12 +549,45 @@ void partInfo12(int swnum) {
 }
 
 
+// Структуры данных
+void partInfo13(int swnum) {
+    struct Tree {
+            std::string name;
+            int ages;
+            bool is_alive;
+            float height;
 
+            void get_info() {
+                std::cout << "Name: " << name << ". Age: " << ages << std::endl;
+            }
+        };
+
+    switch (swnum) {
+    case 1: {
+        Tree dub;
+        dub.name = "Dub";
+        dub.ages = 24;
+        
+        Tree yelka;
+        yelka.name = "Yelka";
+        yelka.ages = 5;
+
+        // std::cout << dub.name << " - " << yelka.name << std::endl;
+        dub.get_info();
+        yelka.get_info();
+
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
 
 
 int main() {
 
-    partInfo12(2);
+    partInfo13(1);
     
 
     return 0;
