@@ -349,7 +349,7 @@ void partInfo6(int swnum) {
 
 // Динамический массив
 void partInfo7(int swnum) {
-    switch(swnum) {
+    switch (swnum) {
     case 1: {
 
         int* nums = new int[3]; // Выдиление памяти
@@ -369,7 +369,7 @@ void partInfo7(int swnum) {
 
 //Работа со строками и символами
 void partInfo8(int swnum) {
-    switch(swnum) {
+    switch (swnum) {
     case 1: {
         char word[] = "Hi!";  // {'H', 'i', '!'};
         for (int i = 0; i < 3; i++) {
@@ -404,12 +404,12 @@ int add(int a, int b) {
 }
 
 void partInfo9(int swnum) {
-    switch(swnum) {
+    switch (swnum) {
     case 1: {
         print("Hello");
         std::string words = "World";
         print(words);
-        print("!!!");        
+        print("!!!");
         break;
     }
     case 2: {
@@ -440,18 +440,18 @@ void print(int word) {
     std::cout << word << std::endl;
 }
 
-void summa(int a, int b){
+void summa(int a, int b) {
     int res = a + b;
     print(res);
 }
 
-void summa(int a, int b, int c){
+void summa(int a, int b, int c) {
     int res = a + b + c;
     print(res);
 }
 
 void partInfo10(int swnum) {
-    switch(swnum) {
+    switch (swnum) {
     case 1: {
         summa(15, 2);
         print("some");
@@ -484,7 +484,7 @@ void partInfo11(int swnum) {
     case 1: {
         // Ссылки
         int num = 10; // 4 byte
-        int &a = num; // хранит только адрес где хранится num (ссылка)
+        int& a = num; // хранит только адрес где хранится num (ссылка)
 
         a = 15;
 
@@ -507,9 +507,9 @@ void partInfo11(int swnum) {
     case 2: {
         // Практический пример
 
-        int arr[] = {5, 7, 3, -2, 5};
+        int arr[] = { 5, 7, 3, -2, 5 };
         minimal(arr, 5);
-        
+
         break;
     }
     default:
@@ -524,7 +524,7 @@ void partInfo12(int swnum) {
     switch (swnum) {
     case 1: {
         std::ofstream file("test.txt", std::ios_base::out);  // Открытие файла
-        if(file.is_open()) {             // Проверка открылся ли файл (is.open() - true / false)
+        if (file.is_open()) {             // Проверка открылся ли файл (is.open() - true / false)
             file << "Hello World";       // Запись текста в тектовый файл
             file.close();                // Закрываем (освобождает ресурсы)
         }
@@ -535,7 +535,7 @@ void partInfo12(int swnum) {
         if (file.is_open()) {            // Проверка открылся ли файл (is.open() - true / false)                        
             //std::string temp;            // Создание переменной
             //file >> temp;                // Указываем что из файла мы считываем данные и записываем в переменную
-            char temp[100]; 
+            char temp[100];
             file.getline(temp, 100);
             std::cout << temp << std::endl;
             file.close();                // Закрываем (освобождает ресурсы)
@@ -557,16 +557,16 @@ void partInfo13(int swnum) {
     };
 
     struct Tree {
-            std::string name;
-            int ages;
-            bool is_alive;
-            float height;
-            Point place;
+        std::string name;
+        int ages;
+        bool is_alive;
+        float height;
+        Point place;
 
-            void get_info() {
-                std::cout << "Name: " << name << ". Age: " << ages << std::endl;
-            }
-        };
+        void get_info() {
+            std::cout << "Name: " << name << ". Age: " << ages << std::endl;
+        }
+    };
 
     switch (swnum) {
     case 1: {
@@ -576,7 +576,7 @@ void partInfo13(int swnum) {
         dub.place.x = 100;
         dub.place.y = 10;
 
-        
+
         Tree yelka;
         yelka.name = "Yelka";
         yelka.ages = 5;
@@ -597,9 +597,46 @@ void partInfo13(int swnum) {
 }
 
 
+// Перечисления
+void partInfo14(int swnum) {
+    enum Options {
+        open,
+        close,
+        wait,
+        del
+    };
+
+    struct File {
+        float weight;
+        std::string name;
+        Options options;
+    };
+
+    switch (swnum) {
+    case 1: {
+        
+        File my_file;
+        my_file.weight = 1.5f;
+        my_file.name = "test.txt";
+        my_file.options = Options::close;
+
+        // std::cout << my_file.options;
+        if (my_file.options == Options::close)
+            std::cout << "File is close" << '\n';
+
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
+
+
 int main() {
 
-    partInfo13(1);
+    partInfo14(1);
     
 
     return 0;
