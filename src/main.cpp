@@ -614,7 +614,7 @@ void partInfo14(int swnum) {
 
     switch (swnum) {
     case 1: {
-        
+
         File my_file;
         my_file.weight = 1.5f;
         my_file.name = "test.txt";
@@ -633,11 +633,36 @@ void partInfo14(int swnum) {
 }
 
 
+// Исключения
+// Обработчик исключений (ошибок)
+void divide(float a, float b) {
+    if (b == 0) throw 101;
+    else std::cout << (a / b);
+}
+
+void partInfo15(int swnum) {
+    switch (swnum) {
+    case 1: {
+
+        try {
+            divide(5.2f, 0.0f);
+        }
+        catch (int err) {
+            if (err == 101) std::cout << "Error when dividing by zero";
+        }
+        break;
+    }
+    default:
+        std::cout << "Default";
+        break;
+    }
+}
+
 
 int main() {
 
-    partInfo14(1);
-    
+    partInfo15(1);
+
 
     return 0;
 }
