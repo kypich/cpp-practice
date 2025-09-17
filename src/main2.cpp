@@ -9,28 +9,39 @@ private:
     int year;
     string type;
 public:
-    void set_data(int y, string t) {
+    // Конструктор
+    Building(int y, string t) {
+        this->set_data(y, t);
+    }
+
+    Building(int y) {
         year = y;
-        type = t;
+    }
+
+    Building() {}
+
+    void set_data(int year, string type) {
+        this->year = year;
+        this->type = type;
     }
 
     void get_info() {
         cout << "Type: " << type << ". Year: " << year << '\n';
     }
+
+    // Деструктор
+    ~Building() {
+        cout << "Delete object" << '\n';
+    }
+
 };
 
 int main() {
 
-    Building school;
-    // school.type = "School";
-    // school.year = 2000;
-    school.set_data(2000, "School");
+    Building school(2000, "School");
     school.get_info();
     
-    Building house;
-    // house.type = "House";
-    // house.year = 2010;
-    house.set_data(2010, "House");
+    Building house(2010);
     house.get_info();
     
 
